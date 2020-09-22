@@ -1,0 +1,729 @@
+/* 
+    Created on : Sep 10, 2015, Sep 10, 2015 12:29:24 PM
+    Author     : mitr media
+*/
+
+/* ======= Embeding Fonts ========== */
+@font-face {
+  font-family: TISClassEdge;
+  src: url('../fonts/TISClassEdge_Regular.eot'),
+    url('../fonts/TISClassEdge_Regular.ttf') format('truetype');
+}
+@font-face {
+  font-family: TISClassEdgeBold;
+  src: url('../fonts/TISClassEdge_Bold.eot'),
+    url('../fonts/TISClassEdge_Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: TISClassEdgeItalic;
+  src: url('../fonts/TISClassEdge_Italics.eot'),
+    url('../fonts/TISClassEdge_Italics.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: TISClassEdgeBoldItalic;
+  src: url('../fonts/TISClassEdge_BoldItalics.eot'),
+    url('../fonts/TISClassEdge_BoldItalics.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: TIS_Sub;
+  src: url('../fonts/TIS_Sub.eot'),
+    url('../fonts/TIS_Sub.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: TIS_Sub_Bold;
+  src: url('../fonts/TIS_Sub_Bold.eot'),
+    url('../fonts/TIS_Sub_Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: TIS_Sub_Italic;
+  src: url('../fonts/TIS_Sub_Italic.eot'),
+    url('../fonts/TIS_Sub_Italic.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: TIS_Sub_Bold_Italic;
+  src: url('../fonts/TTIS_Sub_BoldItalic.eot'),
+    url('../fonts/TIS_Sub_BoldItalic.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: TIS_Sup;
+  src: url('../fonts/TIS_Sup.eot'),
+    url('../fonts/TIS_Sup.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: TIS_Sup_Bold;
+  src: url('../fonts/TIS_Sup_Bold.eot'),
+    url('../fonts/TIS_Sup_Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: TIS_Sup_Italic;
+  src: url('../fonts/TIS_Sup_Italic.eot'),
+    url('../fonts/TIS_Sup_Italic.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: TIS_Sup_BoldItalic;
+  src: url('../fonts/TIS_Sup_BoldItalic.eot'),
+    url('../fonts/TIS_Sup_BoldItalic.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: TIS_Symbol;
+  src: url('../fonts/TIS_Symbol.eot'),
+    url('../fonts/TIS_Symbol.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: SassoonInfantCom;
+  src: url('../fonts/SassoonInfantCom-Regular.eot'),
+    url('../fonts/SassoonInfantCom-Regular.ttf') format('truetype');
+}
+@font-face {
+  font-family: SassoonInfantComBold;
+  src: url('../fonts/SassoonInfantCom-Bold.eot'),
+    url('../fonts/SassoonInfantCom-Bold.ttf') format('truetype');
+}
+@font-face {
+  font-family: Chinacat;
+  src: url('../fonts/CHINT.eot'), url('../fonts/CHINT.TTF') format('truetype');
+}
+
+@font-face {
+  font-family: BRH Gujarati;
+  src: url('../fonts/brhguj.eot'), url('../fonts/brhguj.ttf') format('truetype');
+}
+@font-face {
+  font-family: BRHGujarati;
+  src: url('../fonts/brhguj.eot'), url('../fonts/brhguj.ttf') format('truetype');
+}
+@font-face {
+  font-family: KrutiDev010;
+  src: url('../fonts/K010.eot'), url('../fonts/K010.TTF') format('truetype');
+}
+@font-face {
+  font-family: KrutiDev010Bold;
+  src: url('../fonts/krdv011.eot'),
+    url('../fonts/krdv011.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: KrutiDev010Italic;
+  src: url('../fonts/KRDV012.eot'),
+    url('../fonts/KRDV012.TTF') format('truetype');
+}
+/*==========================*/
+
+body {
+  font-family: TISClassEdge, sans-serif;
+  display: block;
+  overflow: hidden;
+  /*-ms-touch-action: none; */
+}
+/* To fix the patch in the selection in tab */
+body::selection,
+div::selection,
+td::selection,
+span::selection,
+b::selection,
+i::selection,
+a::selection,
+img::selection,
+canvas::selection {
+  /* background:rgba(0,0,0,0); */
+}
+body,
+div,
+td,
+span,
+b,
+i,
+a,
+img,
+canvas {
+  /* -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+	-webkit-user-drag: none;
+	-webkit-tap-highlight-color: rgba(0,0,0,0); */
+}
+/*  ================ CSS for Preloader ================== 
+	Preloader elements are prefixed with "preloader-";
+*/
+#preloader-container {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: 100000;
+  display: block;
+}
+/* #preloader-container #preloader-animation {
+	position: absolute;
+	left: 440px;
+	top:300px;
+	background: url('../../player/images/loading.gif') no-repeat;
+	width: 88px;
+	height: 16px;
+} */
+#preloader-container #preloader-animation {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  background: rgba(255, 255, 255, 0.5) url('../images/loader.gif') no-repeat
+    center center;
+}
+#preloader-container #preloader-shell #preloader-status {
+  width: 993px;
+  text-align: center;
+}
+#preloader-container #preloader-shell #preloader-background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0px;
+  top: 0px;
+  background: #fff;
+}
+#preloader-container #preloader-shell #preloader-logo {
+  position: absolute;
+  left: 420px;
+  top: 200px;
+  background: url('../../player/images/logo.png') no-repeat;
+  width: 101px;
+  height: 79px;
+}
+/*  ================ CSS for Navigational Panel ================== 
+	Navigation elements are prefixed with "nav-";
+*/
+#nav-container {
+  position: absolute;
+  top: 2px;
+  left: 0px;
+  z-index: 1000;
+}
+#nav-container #nav-replayButton {
+  cursor: pointer;
+}
+#nav-container .nav-replayIcon {
+  position: absolute;
+  top: 6px;
+  left: 8px;
+  width: 24px;
+  height: 24px;
+  background: url('../../player/images/playercontrols-icons.png') no-repeat;
+  background-position: -48px 0;
+}
+#nav-container .bigPlayIcon {
+  position: absolute;
+  background: url('../../player/images/bigPlay.png');
+  left: 425px;
+  top: 230px;
+  width: 150px;
+  height: 150px;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  border-radius: 76px;
+  cursor: pointer;
+}
+
+#nav-container .navPanelInteractive-replayButton-class {
+  position: absolute;
+  top: 538px;
+  left: 454px;
+}
+#nav-container .navPanelStepAnimation-replayButton-class {
+  position: absolute;
+  top: 538px;
+  left: 285px;
+}
+#nav-container #nav-playButton {
+  cursor: pointer;
+}
+#nav-container .nav-playIcon {
+  position: absolute;
+  top: 6px;
+  left: 8px;
+  width: 24px;
+  height: 24px;
+  background: url('../../player/images/playercontrols-icons.png') no-repeat;
+}
+#nav-container .navPanelAnimation-playButton-class {
+  position: absolute;
+  top: 538px;
+  left: 359px;
+}
+#nav-container .buttonBackground-class {
+  width: 40px;
+  height: 36px;
+  background: #3d3d3d;
+}
+#nav-container .navPanelStepAnimation-playButton-class {
+  position: absolute;
+  top: 538px;
+  left: 245px;
+}
+#nav-container .navPanelInteractive-playButton-class {
+  position: absolute;
+  top: 538px;
+  left: 413px;
+}
+#nav-container #nav-pauseButton {
+  cursor: pointer;
+  display: none;
+}
+#nav-container .nav-pauseIcon {
+  position: absolute;
+  top: 6px;
+  left: 8px;
+  width: 24px;
+  height: 24px;
+  background: url('../../player/images/playercontrols-icons.png') no-repeat;
+  background-position: -24px 0;
+}
+#nav-container .navPanelAnimation-pauseButton-class {
+  position: absolute;
+  top: 538px;
+  left: 359px;
+}
+#nav-container .navPanelStepAnimation-pauseButton-class {
+  position: absolute;
+  top: 538px;
+  left: 245px;
+}
+#nav-container .navPanelInteractive-pauseButton-class {
+  position: absolute;
+  top: 538px;
+  left: 413px;
+}
+#nav-container #navPanelAnimation-totalTime {
+  cursor: default;
+}
+#nav-container .navPanelAnimation-totalTimeClass {
+  width: 65px;
+  height: 36px;
+  background: #3d3d3d;
+  color: #c9c7c7;
+  font-size: 14px;
+  text-align: center;
+  line-height: 36px;
+}
+#nav-container .navPanelAnimationTotalTimePositionClass {
+  position: absolute;
+  top: 538px;
+  left: 604px;
+  width: 50px;
+}
+#nav-container .navPanelStepAnimationTotalTimePositionClass {
+  position: absolute;
+  top: 538px;
+  left: 515px;
+}
+#nav-container #nav-playDisabledButton {
+  display: none;
+}
+#nav-container #nav-playDisabledButton .nav-playDisabledIcon {
+  opacity: 0.5;
+}
+#nav-container .navPanelAnimation-playDisabledButton-class {
+  position: absolute;
+  top: 538px;
+  left: 359px;
+}
+#nav-container .navPanelStepAnimation-playDisabledButton-class {
+  top: 538px;
+  left: 187px;
+}
+#nav-container .navPanelInteractive-playDisabledButton-class {
+  top: 530px;
+  left: 405px;
+}
+#nav-container #nav-pauseDisabledButton {
+  display: none;
+}
+#nav-container #nav-pauseDisabledButton .nav-pauseDisabledIcon {
+  opacity: 0.5;
+}
+
+#nav-container .navPanelAnimation-pauseDisabledButton-class {
+  position: absolute;
+  top: 538px;
+  left: 359px;
+}
+#nav-container .navPanelStepAnimation-pauseDisabledButton-class {
+  position: absolute;
+  top: 538px;
+  left: 246px;
+}
+#nav-container .navPanelInteractive-pauseDisabledButton-class {
+  position: absolute;
+  top: 538px;
+  left: 413px;
+}
+#nav-container #nav-slider {
+  position: absolute;
+  width: 164px;
+  height: 22px;
+  background: #222 none repeat scroll 0% 0%;
+  display: none;
+}
+#nav-container #nav-Interactiveslider {
+  position: absolute;
+  width: 188px;
+  height: 22px;
+  background: #222 none repeat scroll 0% 0%;
+  display: none;
+}
+#nav-container .navPanelStepAnimation-slider-class {
+  top: 545px;
+  left: 340px;
+}
+#nav-container #nav-sliderTip {
+  position: absolute;
+  float: left;
+  left: 120px;
+  top: 0px;
+  width: 20px;
+  height: 20px;
+  background-color: black;
+}
+#nav-container #nav-background {
+  position: absolute;
+  height: 36px;
+  background: #4d4d4d; /* Old browsers */
+}
+#nav-container .navPanelAnimation-background-class {
+  width: 245px;
+  top: 538px;
+  left: 359px;
+}
+#nav-container .navPanelInteractive-background-class {
+  width: 163px;
+  top: 538px;
+  left: 413px;
+}
+#nav-container .navPanelStepAnimation-background-class {
+  width: 245px;
+  top: 538px;
+  left: 271px;
+}
+#nav-container #nav-sliderBack {
+  position: absolute;
+  width: 225px;
+  height: 36px;
+  top: 538px;
+  left: 187px;
+  background: #4d4d4d; /* Old browsers */
+  display: none;
+}
+#nav-container #nav-nextButton {
+  position: absolute;
+}
+#nav-container .nav-nextBtnHighlightClass {
+  cursor: pointer;
+}
+#nav-container .nav-nextIcon {
+  position: absolute;
+  top: 6px;
+  right: 8px;
+  width: 24px;
+  height: 24px;
+  background: url('../../player/images/playercontrols-icons.png') no-repeat;
+  background-position: -168px 0;
+}
+#nav-container .navPanelInteractive-nextButton-class {
+  top: 538px;
+  left: 536px;
+}
+#nav-container .navPanelInteractive-nextButtonHighlight-class {
+  position: absolute;
+  top: 538px;
+  left: 536px;
+}
+#nav-container #nav-nextButtonHighlight {
+  display: none;
+}
+#nav-container #nav-backButton {
+}
+#nav-container .nav-backIcon {
+  position: absolute;
+  top: 6px;
+  right: 8px;
+  width: 24px;
+  height: 24px;
+  background: url('../../player/images/playercontrols-icons.png') no-repeat;
+  background-position: -145px 0;
+}
+#nav-container .navPanelInteractive-backbutton-class {
+  position: absolute;
+  top: 538px;
+  left: 495px;
+}
+#nav-container #nav-playAgainButton {
+  position: absolute;
+  width: 80px;
+  height: 36px;
+  background: #3d3d3d;
+  border-left: 1px solid #4d4d4d;
+  color: #fff;
+  font-size: 14px;
+  line-height: 36px;
+  text-align: center;
+  display: none;
+  cursor: pointer;
+}
+#nav-container .nav-playAgainIcon {
+  position: absolute;
+  top: 6px;
+  left: 8px;
+  width: 24px;
+  height: 24px;
+  background: url('../../player/images/playercontrols-icons.png') no-repeat;
+  background-position: -48px 0;
+}
+#nav-container .navPanelAnimation-playAgainButton-class {
+  top: 538px;
+  left: 654px;
+}
+#nav-container .navPanelStepAnimation-playAgainButton-class {
+  top: 538px;
+  left: 580px;
+}
+#nav-container .navPanelInteractive-playAgainButton-class {
+  top: 538px;
+  left: 576px;
+}
+#nav-container #nav-sliderStepPointHolder {
+  position: absolute;
+  z-index: 2;
+}
+#nav-container #nav-sliderStepPointHolder .nav-stepClass {
+  position: absolute;
+  top: -4px;
+  width: 14px;
+  height: 14px;
+  background: url('../../player/images/playercontrols-icons.png') -244px -6px
+    no-repeat;
+  cursor: pointer;
+}
+#nav-container #nav-sliderHolder .nav-stepLineClass {
+  position: absolute;
+  top: -9px;
+  width: 23px;
+  height: 23px;
+  background: #87ddfa;
+  opacity: 0.01;
+}
+#nav-container #nav-sliderHolder .nav-stepLineClass:hover {
+  opacity: 0.01;
+  cursor: default;
+}
+#nav-container .ui-slider-range {
+  background: url('../../player/images/playerpattern.png');
+  background-repeat: repeat-x;
+}
+#nav-container .navPanelAnimation-slider-class {
+  top: 545px;
+  left: 414px;
+  width: 164px !important;
+}
+.ui-slider-horizontal .ui-slider-handle {
+  margin-left: -0.45em !important;
+}
+#nav-container .navPanelStepAnimation-sliderStepPointHolder-class {
+  top: 554px;
+  left: 340px;
+}
+#nav-container .navPanelInteractive-slider-class {
+  top: 545px;
+  left: 202px;
+}
+#nav-container .navPanelInteractive-sliderStepPointHolder-class {
+  top: 555px;
+  left: 120px;
+}
+#nav-container #nav-slider .ui-slider-handle {
+  left: 0px;
+  outline: medium none;
+  z-index: 3;
+  /*  cursor: pointer; */
+}
+/*  ================ END CSS for Navigational Panel ================== */
+
+/*  ================ CSS for Video Tag ================== */
+#pageVideo {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 993px;
+  height: 610px;
+}
+
+.blackOverlayDivCls {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 992px;
+  height: 610px;
+  background: #ffffff;
+  opacity: 0.5;
+}
+/*  ================ End CSS for Video Tag ================== */
+
+/*  ================ CSS for white background patch to display the iText for Category 3 ================== */
+#instructionPatch {
+  position: absolute;
+  top: 580px;
+  left: 0px;
+  width: 993px;
+  height: 30px;
+  background: #ebebeb;
+  z-index: 1001;
+}
+/*  ================ End CSS for iText backgroung ================== */
+
+/*  ================ CSS for Tooltip display ================== */
+#customToolTip-container #customToolTip {
+  position: absolute;
+  font-size: 14px;
+  left: 0px;
+  top: 0px;
+  padding: 7px;
+  background-color: rgba(0, 0, 0, 1);
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  color: rgb(255, 255, 255);
+  /* box-shadow: 1px 1px 3px #333; */
+  display: none;
+}
+#customToolTip-container #toolTipArrow {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: rgba(0, 0, 0, 1);
+  -webkit-transform: translateY(-15px) rotate(45deg);
+  -ms-transform: translateY(-15px) rotate(45deg); /* IE 9 */
+  -webkit-transform: translateY(-15px) rotate(45deg); /* Chrome, Safari, Opera */
+  transform: translateY(-15px) rotate(45deg);
+  display: none;
+}
+#customToolTip-container .toolTipArrowLeft {
+  -ms-transform: rotate(-90deg);
+  -webkit-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+}
+#activityMask {
+  width: 990px;
+  height: 620px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: rgba(255, 255, 255, 0);
+  display: none;
+}
+
+/*  ================ CSS for Tooltip display ================== */
+
+/*  ================ CSS for Poster Image ==================
+*/
+#vid-poster {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 993px;
+  height: 610px;
+}
+/*  ================ CSS for textDiv Image ==================
+*/
+#textDiv {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 993px;
+  height: 610px;
+}
+/*  ================ End CSS for Poster Image DIV element ================== 
+
+
+
+
+/*  ================ Highlighting Player control Status   ================ */
+.highlight-stat {
+  animation-name: playhighlight;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+
+  -webkit-animation-name: playhighlight; /* Chrome, Safari, Opera */
+  -webkit-animation-duration: 2s; /* Chrome, Safari, Opera */
+  -webkit-animation-iteration-count: infinite;
+}
+
+@keyframes playhighlight {
+  0% {
+    background: #efc005;
+  }
+  50% {
+    background: #3d3d3d;
+  }
+  100% {
+    background: #efc005;
+  }
+}
+
+@-webkit-keyframes playhighlight {
+  0% {
+    background: #efc005;
+  }
+  50% {
+    background: #3d3d3d;
+  }
+  100% {
+    background: #efc005;
+  }
+}
+
+@-moz-keyframes playhighlight {
+  0% {
+    background: #efc005;
+  }
+  50% {
+    background: #3d3d3d;
+  }
+  100% {
+    background: #efc005;
+  }
+}
+
+@-ms-keyframes playhighlight {
+  0% {
+    background: #efc005;
+  }
+  50% {
+    background: #3d3d3d;
+  }
+  100% {
+    background: #efc005;
+  }
+}
+/* =================================================================== */
+#dummyiTxtContainer * {
+  z-index: 1001;
+}
+
+.myIframe {
+  border-radius: 10px;
+}

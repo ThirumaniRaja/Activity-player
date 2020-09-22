@@ -1,0 +1,487 @@
+html {
+  font-family: TISClassEdge, sans-serif;
+}
+body {
+  margin: 0 auto;
+}
+#ctitle {
+  position: relative;
+  text-align: center;
+  font-family: TISClassEdge, sans-serif;
+  font-size: 30px;
+  /*left: 630px;*/
+  text-align: center;
+  top: 200px;
+}
+.hide {
+  display: none;
+}
+#btn_1 {
+  top: 0px;
+  left: 30px;
+}
+#btn_2 {
+  left: 160px;
+  top: 0px;
+}
+#btn_3 {
+  left: 290px;
+  top: 0px;
+}
+#btn_4 {
+  left: 420px;
+  top: 0px;
+}
+#VID {
+  width: 100%;
+  height: 100%;
+}
+.clickClass {
+  background-color: #00cbfd;
+  color: #000;
+  outline: 0 !important;
+}
+.normalClass {
+  background-color: #000;
+  color: #00cbfd;
+  pointer-events: auto;
+  opacity: 1;
+}
+.disableButton {
+  opacity: 0.5 !important;
+  cursor: default !important;
+}
+.enableButton {
+  opacity: 1 !important;
+  cursor: pointer !important;
+}
+.VideoDisplay {
+  display: none;
+}
+.mainWrapper {
+  height: 608px;
+  width: 992px;
+  background-color: #f0e6c8;
+  display: inline-block;
+
+  /*border: 1px solid #000;
+		    margin: 0 auto;
+		    border-radius: 5px;
+		    box-shadow: 1px 0px 10px #000;*/
+}
+h1 {
+  text-align: center;
+}
+footer {
+  position: absolute;
+  top: 455px;
+  width: 992px;
+}
+.aCls1 {
+  border: none !important;
+  margin-right: 0px !important;
+  float: right !important;
+}
+.aCls2 {
+  border: none !important;
+  margin-left: 0px !important;
+  float: right !important;
+}
+.btnWrapper {
+  height: 100px;
+  width: 385px;
+  border: 1px solid #00cbfd;
+  background-color: #000;
+  border-left: 0px;
+  border-bottom-right-radius: 5px;
+  border-top-right-radius: 5px;
+}
+.button {
+  /*margin-top: 35px;*/
+  margin-left: 10px;
+  height: 35px;
+  cursor: pointer;
+  width: 80px;
+  font-size: 1em;
+  border: 1px solid #00cbfd;
+  border-radius: 5px;
+  /*background-color: #000;*/
+  /*color: #00CBFD;*/
+}
+/*.button:active{
+			background-color: #00CBFD;
+		    color: #000;
+		}*/
+.btnGroup {
+  float: left;
+}
+.grayBtn,
+.grayBtn1 {
+  position: relative;
+  height: 30px;
+  width: 15px;
+  border-bottom-right-radius: 9px;
+  border-top-right-radius: 9px;
+  background-color: #00cbfd;
+  cursor: pointer;
+  margin-left: 386px;
+  margin-top: -70px;
+  padding: 3px 8px;
+  font-size: 25px;
+}
+.grayBtn {
+  display: none;
+}
+.navigationBtn {
+  position: absolute;
+  top: 52px;
+  right: 32px;
+  display: inline-flex;
+}
+.fa-arrow-circle-left,
+.fa-arrow-circle-right {
+  font-size: 35px !important;
+  cursor: pointer;
+  margin: 15px;
+}
+.pagination {
+  display: inline-block;
+  /*width: 362px;*/
+  background-color: rgba(0, 204, 253, 0.3);
+  margin-left: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+.pArrow_1 {
+  content: '';
+  position: absolute;
+  top: 46%;
+  left: 4.2%;
+  margin-left: 0px;
+  border-width: 10px;
+  border-style: solid;
+  border-color: rgba(0, 204, 253, 0.3) transparent transparent transparent;
+}
+.pArrow_2 {
+  content: '';
+  position: absolute;
+  top: 46%;
+  left: 13.5%;
+  margin-left: 0px;
+  border-width: 10px;
+  border-style: solid;
+  border-color: rgba(0, 204, 253, 0.3) transparent transparent transparent;
+  display: none;
+}
+.pArrow_3 {
+  content: '';
+  position: absolute;
+  top: 46%;
+  left: 22.5%;
+  margin-left: 0px;
+  border-width: 10px;
+  border-style: solid;
+  border-color: rgba(0, 204, 253, 0.3) transparent transparent transparent;
+  display: none;
+}
+.pArrow_4 {
+  content: '';
+  position: absolute;
+  top: 46%;
+  left: 32%;
+  margin-left: 0px;
+  border-width: 10px;
+  border-style: solid;
+  border-color: rgba(0, 204, 253, 0.3) transparent transparent transparent;
+  display: none;
+}
+
+.pagination a {
+  color: #00cbfd;
+  float: left;
+  margin: 5px;
+  padding: 2px 6px;
+  text-decoration: none;
+  border: 1px solid #00cbfd;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.bcSelected {
+  background-color: #00cbfd;
+  color: #000000 !important;
+}
+.pagination a:hover {
+  background-color: #00cbfd;
+  color: #000;
+}
+a {
+  text-decoration: none;
+}
+#backBtn {
+  background: url('../../player/images/back.png') no-repeat;
+  width: 35.6px;
+  height: 50.2px;
+  cursor: pointer;
+  margin: 0 5px;
+  background-size: 100% 100%;
+}
+#nextBtn {
+  background: url('../../player/images/next.png') no-repeat;
+  width: 35.6px;
+  height: 50.2px;
+  display: none;
+  cursor: pointer;
+  margin: 0 5px;
+  background-size: 100% 100%;
+}
+#nav-container {
+  position: absolute;
+  top: 2px;
+  left: 0px;
+  z-index: 1000;
+}
+#nav-container #nav-background {
+  position: absolute;
+  height: 36px;
+  background: #4d4d4d; /* Old browsers */
+}
+#nav-container .navPanelInteractive-background-class {
+  width: 163px;
+  top: 570px;
+  left: 413px;
+}
+#nav-container .buttonBackground-class {
+  width: 40px;
+  height: 36px;
+  background: #3d3d3d;
+}
+#nav-container #nav-playButton {
+  cursor: pointer;
+}
+#nav-container .navPanelInteractive-playButton-class {
+  position: absolute;
+  top: 570px;
+  left: 413px;
+}
+#nav-container #nav-pauseButton {
+  cursor: pointer;
+  display: none;
+}
+#nav-container .navPanelInteractive-pauseButton-class {
+  position: absolute;
+  top: 570px;
+  left: 413px;
+}
+#nav-container #nav-pauseDisabledButton {
+  display: none;
+}
+#nav-container .navPanelInteractive-pauseDisabledButton-class {
+  position: absolute;
+  top: 570px;
+  left: 413px;
+}
+#nav-container #nav-nextButton {
+  position: absolute;
+}
+#nav-container .navPanelInteractive-nextButton-class {
+  top: 570px;
+  left: 536px;
+}
+#nav-container #nav-nextButtonHighlight {
+  display: none;
+}
+#nav-container .navPanelInteractive-nextButtonHighlight-class {
+  position: absolute;
+  top: 570px;
+  left: 536px;
+}
+#nav-container .navPanelInteractive-backbutton-class {
+  position: absolute;
+  top: 570px;
+  left: 495px;
+}
+#nav-container #nav-replayButton {
+  cursor: pointer;
+}
+#nav-container .navPanelInteractive-replayButton-class {
+  position: absolute;
+  top: 570px;
+  left: 454px;
+}
+
+#nav-container .nav-playIcon {
+  position: absolute;
+  top: 6px;
+  left: 8px;
+  width: 24px;
+  height: 24px;
+  background: url('../../player/images/playercontrols-icons.png') no-repeat;
+}
+#nav-container #nav-playDisabledButton .nav-playDisabledIcon {
+  opacity: 0.5;
+}
+#nav-container .nav-pauseIcon {
+  position: absolute;
+  top: 6px;
+  left: 8px;
+  width: 24px;
+  height: 24px;
+  background: url('../../player/images/playercontrols-icons.png') no-repeat;
+  background-position: -24px 0;
+}
+#nav-container #nav-pauseDisabledButton .nav-pauseDisabledIcon {
+  opacity: 0.5;
+}
+#nav-container .nav-nextIcon {
+  position: absolute;
+  top: 6px;
+  right: 8px;
+  width: 24px;
+  height: 24px;
+  background: url('../../player/images/playercontrols-icons.png') no-repeat;
+  background-position: -168px 0;
+}
+#nav-container .nav-nextBtnHighlightClass {
+  cursor: pointer;
+}
+#nav-container .nav-backIcon {
+  position: absolute;
+  top: 6px;
+  right: 8px;
+  width: 24px;
+  height: 24px;
+  background: url('../../player/images/playercontrols-icons.png') no-repeat;
+  background-position: -145px 0;
+}
+#nav-container .nav-replayIcon {
+  position: absolute;
+  top: 6px;
+  left: 8px;
+  width: 24px;
+  height: 24px;
+  background: url('../../player/images/playercontrols-icons.png') no-repeat;
+  background-position: -48px 0;
+}
+#grayForwardButton .arrow-right {
+  position: absolute;
+  top: 5px;
+  left: 8px;
+  width: 15px;
+  height: 25px;
+  background: url('../../player/images/arrows.png') no-repeat;
+  background-position: -15px 0;
+}
+#grayBackButton .arrow-left {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 15px;
+  height: 25px;
+  background: url('../../player/images/arrows.png') no-repeat;
+}
+
+/*  ================ Highlighting Player control Status   ================ */
+.highlight-stat {
+  animation-name: playhighlight;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+
+  -webkit-animation-name: playhighlight; /* Chrome, Safari, Opera */
+  -webkit-animation-duration: 2s; /* Chrome, Safari, Opera */
+  -webkit-animation-iteration-count: infinite;
+}
+
+@keyframes playhighlight {
+  0% {
+    background: #efc005;
+  }
+  50% {
+    background: #3d3d3d;
+  }
+  100% {
+    background: #efc005;
+  }
+}
+
+@-webkit-keyframes playhighlight {
+  0% {
+    background: #efc005;
+  }
+  50% {
+    background: #3d3d3d;
+  }
+  100% {
+    background: #efc005;
+  }
+}
+
+@-moz-keyframes playhighlight {
+  0% {
+    background: #efc005;
+  }
+  50% {
+    background: #3d3d3d;
+  }
+  100% {
+    background: #efc005;
+  }
+}
+
+@-ms-keyframes playhighlight {
+  0% {
+    background: #efc005;
+  }
+  50% {
+    background: #3d3d3d;
+  }
+  100% {
+    background: #efc005;
+  }
+}
+
+/*  ================ CSS for Tooltip display ================== */
+#customToolTip-container #customToolTip {
+  position: absolute;
+  font-size: 14px;
+  left: 0px;
+  top: 0px;
+  padding: 7px;
+  background-color: rgba(0, 0, 0, 1);
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  color: rgb(255, 255, 255);
+  /* box-shadow: 1px 1px 3px #333; */
+  display: none;
+}
+#customToolTip-container #toolTipArrow {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: rgba(0, 0, 0, 1);
+  -webkit-transform: translateY(-15px) rotate(45deg);
+  -ms-transform: translateY(-15px) rotate(45deg); /* IE 9 */
+  -webkit-transform: translateY(-15px) rotate(45deg); /* Chrome, Safari, Opera */
+  transform: translateY(-15px) rotate(45deg);
+  display: none;
+}
+#customToolTip-container .toolTipArrowLeft {
+  -ms-transform: rotate(-90deg);
+  -webkit-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+}
+#preloader {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 999;
+  width: 98%;
+  height: 100%;
+  overflow: visible;
+  background: rgba(255, 255, 255, 0.5)
+    url(/ce-static/classedgelx/css/images/loader.gif) no-repeat center center;
+}

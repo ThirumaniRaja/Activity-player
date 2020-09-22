@@ -1,0 +1,191 @@
+{
+  "mediaType": [
+    {
+      "media": "animation",
+      "domElements": [
+        "videoElement",
+        "posterImage",
+        "mediaText",
+        "blackOverlay",
+        "preloader",
+        "annotationCanvas",
+        "nav-container",
+        "customToolTip-container",
+        "instructionPatch",
+        "instructionTxt",
+        "dummyiTxtContainer"
+      ]
+    },
+    {
+      "media": "interactive",
+      "domElements": [
+        "videoElement",
+        "posterImage",
+        "mediaText",
+        "blackOverlay",
+        "preloader",
+        "activityPage",
+        "starDiv",
+        "activityMask",
+        "annotationCanvas",
+        "menuDiv",
+        "nav-container",
+        "customToolTip-container",
+        "instructionPatch",
+        "dummyiTxtContainer"
+      ]
+    }
+  ],
+  "videoElement": {
+    "id": "pageVideo",
+    "class": "",
+    "type": "video",
+    "data": "pageVideo"
+  },
+  "posterImage": {
+    "id": "vid-poster",
+    "class": "",
+    "type": "div",
+    "data": "vidPoster"
+  },
+  "mediaText": {
+    "id": "textDiv",
+    "class": "textWrapperDivCls",
+    "type": "canvas",
+    "data": "textDiv",
+    "width": "993",
+    "height": "610"
+  },
+  "blackOverlay": {
+    "id": "blackOverlay",
+    "class": "blackOverlayDivCls",
+    "type": "div",
+    "data": "blackOverlay",
+    "width": "993",
+    "height": "610"
+  },
+  "preloader": {
+    "id": "preloader-container",
+    "class": "",
+    "type": "div",
+    "data": "preloaderContainer",
+    "subelements": {
+      "videoLoader": {
+        "id": "preloader-animation",
+        "class": "",
+        "type": "div",
+        "data": "preloaderAnimation"
+      },
+      "preloader-shell": {
+        "id": "preloader-shell",
+        "class": "",
+        "type": "div",
+        "data": "preloaderShell",
+        "subelements": {
+          "preloaderBack": {
+            "id": "preloader-background",
+            "class": "",
+            "type": "div",
+            "data": "preloaderBackground"
+          },
+          "loaderImage": {
+            "id": "preloader-logo",
+            "class": "",
+            "type": "div",
+            "data": "preloaderLogo"
+          },
+          "preloaderText": {
+            "id": "preloader-status",
+            "class": "",
+            "type": "p",
+            "data": "preloaderStatus"
+          }
+        }
+      }
+    }
+  },
+  "nav-container": {
+    "id": "nav-container",
+    "class": "",
+    "type": "div",
+    "data": "navContainer"
+  },
+  "customToolTip-container": {
+    "id": "customToolTip-container",
+    "class": "",
+    "type": "div",
+    "data": "customToolTipContainer",
+    "subelements": {
+      "customToolTip": {
+        "id": "customToolTip",
+        "class": "customToolTip-class",
+        "type": "div",
+        "data": "customToolTip"
+      },
+      "toolTipArrow": {
+        "id": "toolTipArrow",
+        "class": "",
+        "type": "div",
+        "data": "toolTipArrow"
+      }
+    }
+  },
+  "activityPage": {
+    "id": "activityPage",
+    "class": "",
+    "type": "div",
+    "data": "activityPage"
+  },
+  "starDiv": {
+    "id": "starDiv",
+    "class": "",
+    "type": "div",
+    "data": "starDiv"
+  },
+  "menuDiv": {
+    "id": "menuDiv",
+    "class": "",
+    "type": "div",
+    "data": "menuDiv"
+  },
+  "activityMask": {
+    "id": "activityMask",
+    "class": "",
+    "type": "div",
+    "data": "activityMask"
+  },
+  "instructionPatch": {
+    "id": "instructionPatch",
+    "class": "",
+    "type": "div",
+    "data": "instructionPatch",
+    "subelements": {
+      "instructionTxt": {
+        "id": "instructionTxt",
+        "class": "",
+        "type": "div",
+        "data": "instructionTxt"
+      }
+    }
+  },
+  "instructionTxt": {
+    "id": "instructionTxt",
+    "class": "",
+    "type": "div",
+    "data": "instructionTxt"
+  },
+  "dummyiTxtContainer": {
+    "id": "dummyiTxtContainer",
+    "class": "",
+    "type": "div",
+    "data": "dummyiTxtContainer"
+  },
+  "annotationCanvas": {
+    "id": "annotationCanvas",
+    "class": "",
+    "type": "canvas",
+    "data": "annotationCanvas",
+    "width": 992,
+    "height": 610
+  }
+}

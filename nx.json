@@ -1,0 +1,28 @@
+{
+  "npmScope": "tce-player",
+  "implicitDependencies": {
+    "angular.json": "*",
+    "package.json": {
+      "dependencies": "*",
+      "devDependencies": "*"
+    },
+    "tsconfig.json": "*",
+    "tslint.json": "*",
+    "nx.json": "*"
+  },
+  "projects": {
+    "tce-player": {
+      "tags": []
+    },
+    "tce-player-e2e": {
+      "tags": [],
+      "implicitDependencies": ["tce-player"]
+    },
+    "lib-config": {
+      "tags": []
+    },
+    "activity-player": {
+      "tags": []
+    }
+  }
+}

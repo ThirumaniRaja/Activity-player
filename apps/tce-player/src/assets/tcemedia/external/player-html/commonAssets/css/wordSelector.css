@@ -1,0 +1,326 @@
+.tickDiv:after {
+  content: '';
+}
+
+.RadioBtn_type1 {
+  width: 26px;
+  height: 26px;
+  background: linear-gradient(
+    to bottom,
+    rgba(150, 150, 158, 1) 0%,
+    rgba(150, 150, 158, 1) 10%,
+    rgba(0, 0, 0, 1) 100%
+  );
+  position: absolute;
+  left: 50px;
+  top: 85px;
+  opacity: 1;
+  border-radius: 100%;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+}
+
+.RadioBtn_type1:after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 8px;
+  top: 8px;
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  background: rgba(255, 255, 255, 0.35);
+}
+.RadioBtn_type1:before {
+  content: '';
+  position: absolute;
+  left: 4px;
+  top: 4px;
+  display: block;
+  width: 17px;
+  height: 17px;
+  background: linear-gradient(
+    135deg,
+    rgba(38, 38, 38, 1) 0%,
+    rgba(129, 129, 136, 1) 100%
+  );
+  border-radius: 100%;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+}
+
+.RadioBtnSelected_type1:after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 8px;
+  top: 8px;
+  width: 10px;
+  height: 10px;
+  background: linear-gradient(
+    to bottom,
+    rgba(27, 194, 243, 1) 0%,
+    rgba(27, 194, 243, 1) 21%,
+    rgba(19, 136, 185, 1) 89%,
+    rgba(19, 136, 185, 1) 100%
+  );
+}
+.RadioBtnSelected_type1:before {
+  content: '';
+  position: absolute;
+  left: 4px;
+  top: 4px;
+  display: block;
+  width: 17px;
+  height: 17px;
+  background: linear-gradient(
+    135deg,
+    rgba(38, 38, 38, 1) 0%,
+    rgba(129, 129, 136, 1) 100%
+  );
+  border-radius: 100%;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+}
+.RadioBtnOver_type1:after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 8px;
+  top: 8px;
+  width: 10px;
+  height: 10px;
+  background: linear-gradient(
+    to bottom,
+    rgba(27, 194, 243, 1) 0%,
+    rgba(27, 194, 243, 1) 21%,
+    rgba(19, 136, 185, 1) 89%,
+    rgba(19, 136, 185, 1) 100%
+  );
+}
+.RadioBtnOver_type1:before {
+  content: '';
+  position: absolute;
+  left: 4px;
+  top: 4px;
+  display: block;
+  width: 17px;
+  height: 17px;
+  background: linear-gradient(
+    135deg,
+    rgba(38, 38, 38, 1) 0%,
+    rgba(129, 129, 136, 1) 100%
+  );
+  border-radius: 100%;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+}
+
+.RadioBtnDisable_type1 {
+  width: 26px;
+  height: 26px;
+  background: linear-gradient(
+    to bottom,
+    rgb(44, 44, 47) 0%,
+    rgb(33, 33, 37) 10%,
+    rgb(67, 63, 63) 100%
+  );
+  position: absolute;
+  left: 50px;
+  top: 85px;
+  opacity: 1;
+  border-radius: 100%;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+}
+.RadioBtnDisable_type1:after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 8px;
+  top: 8px;
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  background: rgba(128, 109, 109, 0.35);
+}
+.RadioBtnDisable_type1:before {
+  content: '';
+  position: absolute;
+  left: 4px;
+  top: 4px;
+  display: block;
+  width: 17px;
+  height: 17px;
+  background: linear-gradient(135deg, rgb(0, 0, 0) 0%, rgb(95, 95, 118) 100%);
+  border-radius: 100%;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+}
+
+/* for gradient */
+.btn_Type2_normal {
+  background: rgba(200, 248, 109, 1);
+  background: -moz-linear-gradient(
+    top,
+    rgba(200, 248, 109, 1) 0%,
+    rgba(122, 200, 0, 1) 49%,
+    rgba(97, 153, 9, 1) 50%,
+    rgba(125, 190, 10, 1) 100%
+  );
+  background: -webkit-gradient(
+    left top,
+    left bottom,
+    color-stop(0%, rgba(200, 248, 109, 1)),
+    color-stop(49%, rgba(122, 200, 0, 1)),
+    color-stop(50%, rgba(97, 153, 9, 1)),
+    color-stop(100%, rgba(125, 190, 10, 1))
+  );
+  background: -webkit-linear-gradient(
+    top,
+    rgba(200, 248, 109, 1) 0%,
+    rgba(122, 200, 0, 1) 49%,
+    rgba(97, 153, 9, 1) 50%,
+    rgba(125, 190, 10, 1) 100%
+  );
+  background: -o-linear-gradient(
+    top,
+    rgba(200, 248, 109, 1) 0%,
+    rgba(122, 200, 0, 1) 49%,
+    rgba(97, 153, 9, 1) 50%,
+    rgba(125, 190, 10, 1) 100%
+  );
+  background: -ms-linear-gradient(
+    top,
+    rgba(200, 248, 109, 1) 0%,
+    rgba(122, 200, 0, 1) 49%,
+    rgba(97, 153, 9, 1) 50%,
+    rgba(125, 190, 10, 1) 100%
+  );
+  background: linear-gradient(
+    to bottom,
+    rgba(200, 248, 109, 1) 0%,
+    rgba(122, 200, 0, 1) 49%,
+    rgba(97, 153, 9, 1) 50%,
+    rgba(125, 190, 10, 1) 100%
+  );
+  -moz-box-shadow: 5px 3px 16px -5px rgba(0, 0, 0, 0.75);
+  box-shadow: 5px 3px 16px -5px rgba(0, 0, 0, 0.75);
+  border: 1px solid #263b04;
+  border-radius: 9px;
+}
+.btn_Type2_over {
+  background: rgba(215, 248, 109, 1);
+  background: -moz-linear-gradient(
+    top,
+    rgba(215, 248, 109, 1) 0%,
+    rgba(122, 224, 0, 1) 49%,
+    rgba(97, 189, 0, 1) 50%,
+    rgba(125, 240, 0, 1) 100%
+  );
+  background: -webkit-gradient(
+    left top,
+    left bottom,
+    color-stop(0%, rgba(215, 248, 109, 1)),
+    color-stop(49%, rgba(122, 224, 0, 1)),
+    color-stop(50%, rgba(97, 189, 0, 1)),
+    color-stop(100%, rgba(125, 240, 0, 1))
+  );
+  background: -webkit-linear-gradient(
+    top,
+    rgba(215, 248, 109, 1) 0%,
+    rgba(122, 224, 0, 1) 49%,
+    rgba(97, 189, 0, 1) 50%,
+    rgba(125, 240, 0, 1) 100%
+  );
+  background: -o-linear-gradient(
+    top,
+    rgba(215, 248, 109, 1) 0%,
+    rgba(122, 224, 0, 1) 49%,
+    rgba(97, 189, 0, 1) 50%,
+    rgba(125, 240, 0, 1) 100%
+  );
+  background: -ms-linear-gradient(
+    top,
+    rgba(215, 248, 109, 1) 0%,
+    rgba(122, 224, 0, 1) 49%,
+    rgba(97, 189, 0, 1) 50%,
+    rgba(125, 240, 0, 1) 100%
+  );
+  background: linear-gradient(
+    to bottom,
+    rgba(215, 248, 109, 1) 0%,
+    rgba(122, 224, 0, 1) 49%,
+    rgba(97, 189, 0, 1) 50%,
+    rgba(125, 240, 0, 1) 100%
+  );
+  -webkit-box-shadow: 5px 3px 16px -5px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 5px 3px 16px -5px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 5px 3px 16px -5px rgba(0, 0, 0, 0.75);
+  box-shadow: 5px 3px 16px -5px rgba(0, 0, 0, 0.75);
+  border: 1px solid #263b04;
+  border-radius: 9px;
+  cursor: pointer;
+}
+
+.btn_Type2_disable {
+  background: rgba(230, 230, 230, 1);
+  background: -moz-linear-gradient(
+    top,
+    rgba(230, 230, 230, 1) 0%,
+    rgba(162, 162, 162, 1) 49%,
+    rgba(132, 132, 132, 1) 50%,
+    rgba(166, 166, 166, 1) 100%
+  );
+  background: -webkit-gradient(
+    left top,
+    left bottom,
+    color-stop(0%, rgba(230, 230, 230, 1)),
+    color-stop(49%, rgba(162, 162, 162, 1)),
+    color-stop(50%, rgba(132, 132, 132, 1)),
+    color-stop(100%, rgba(166, 166, 166, 1))
+  );
+  background: -webkit-linear-gradient(
+    top,
+    rgba(230, 230, 230, 1) 0%,
+    rgba(162, 162, 162, 1) 49%,
+    rgba(132, 132, 132, 1) 50%,
+    rgba(166, 166, 166, 1) 100%
+  );
+  background: -o-linear-gradient(
+    top,
+    rgba(230, 230, 230, 1) 0%,
+    rgba(162, 162, 162, 1) 49%,
+    rgba(132, 132, 132, 1) 50%,
+    rgba(166, 166, 166, 1) 100%
+  );
+  background: -ms-linear-gradient(
+    top,
+    rgba(230, 230, 230, 1) 0%,
+    rgba(162, 162, 162, 1) 49%,
+    rgba(132, 132, 132, 1) 50%,
+    rgba(166, 166, 166, 1) 100%
+  );
+  background: linear-gradient(
+    to bottom,
+    rgba(230, 230, 230, 1) 0%,
+    rgba(162, 162, 162, 1) 49%,
+    rgba(132, 132, 132, 1) 50%,
+    rgba(166, 166, 166, 1) 100%
+  );
+
+  -moz-box-shadow: 5px 3px 16px -5px rgba(0, 0, 0, 0.75);
+  box-shadow: 5px 3px 16px -5px rgba(0, 0, 0, 0.75);
+  border: 1px solid #808080;
+
+  border-radius: 9px;
+  cursor: default;
+}
+
+.addPointer {
+  cursor: pointer;
+}

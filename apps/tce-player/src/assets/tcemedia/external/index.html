@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no"
+    />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <link
+      href="external/player-html/player/css/mainIndex.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script
+      type="text/javascript"
+      src="player-html/player/js/libs/jquery-1.11.3.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="player-html/player/js/shell/tcePlayer.js"
+    ></script>
+    <title>Tata ClassEdge</title>
+  </head>
+
+  <body>
+    <!-- <select id="userInput" style="width: 20%;">
+			<option value="E333F529-830E-443E-B472-2A822081A260">Higher grade - Interactive</option>
+			<option value="6B56A111-FD01-4C60-AA72-ADBA8C72768B">Lower grade - Animation</option>
+			<option value="602AA4CA-5957-4F30-B4DF-264863CB5D15">Middle grade - Step Animation</option>
+			<option value="0F306F4A-1985-4E6A-8BCB-03CB0172A3DA">Middle grade - Interactive 01</option>
+			<option value="4290c1bf-040c-4777-813b-51614474613e">Middle grade - Interactive 02</option>
+			<option value="DF3BA2D4-130A-4031-9ACE-04248D1A49B6">Middle grade - Next Animation</option>
+		</select> -->
+
+    <!-- <input type="submit" id="loadMedia" value="Submit"/> -->
+    <!--textarea id="xmlData" style="width: 400px; height: 400px; display: none"></textarea-->
+    <div class="indexPreloader"></div>
+    <div
+      id="start"
+      class="tButton"
+      style="font-family: Arial; position:absolute; z-index:1500; left:10px; z-index:999; background:grey; top:10px; padding:5px; cursor:pointer"
+    >
+      Set Play/Pause
+    </div>
+    <script>
+      //================================================================================
+      var Player;
+      var callBackUrl =
+        ''; /* This variable would store the call-Back URL for LMS integraton. */
+      var configData =
+        ''; /* This variable would store the content of parameter xml(player config) as a string. */
+      var jsCallBackURL = '';
+      var hostIp = '127.0.0.1';
+      var schoolId = 'testing';
+      var assetxml = '';
+      //"assets/E333F529-830E-443E-B472-2A822081A260/asset.xml";
+      var iframe;
+      var jsPath = '';
+      var iFrameParam = {
+        maxHeight: 610,
+        left: 20,
+        top: 40
+      };
+      //================================================================================
+      var orgId = '';
+      var clientIp = '';
+      //================================================================================
+      function instantiatePlayer() {
+        //Player = new tcePlayer(configData, callBackUrl, jsPath, iFrameParam, clientIp, orgId);
+        //"http://localhost/TCE_Player/player-html/"
+        Player = new tcePlayer(
+          configData,
+          callBackUrl,
+          jsCallBackURL + 'player-html/',
+          { maxHeight: '610px', height: '610px', left: '0px', top: '25px' },
+          hostIp,
+          schoolId,
+          'mdl'
+        );
+        Player.init();
+        //$("#start").click();
+        //
+        /*$(".tButton").unbind('click').bind('click', function()
+            {    
+                Player.externalPlayPause();
+            });*/
+      }
+      //================================================================================
+      function bindSubmitEvent() {
+        //loadXml(assetxml);
+        $('#loadMedia').bind('click', function() {
+          //$(".indexPreloader").show();
+          assetxml = 'assets/' + userInput.value + '/asset.xml';
+          if (Player) {
+            var navigationController = Player.getNavigationController();
+            navigationController.stop();
+            Player.sleep();
+            loadXml(assetxml);
+          } else {
+            loadXml(assetxml);
+          }
+        });
+        $('.tButton').bind('click', function() {
+          console.log('Pausedddddd....');
+          //Player.externalPlayPause();
+          Player.getNavigationController().pause();
+        });
+        loadTest();
+      }
+
+      function loadTest() {
+        assetxml = 'assets/E333F529-830E-443E-B472-2A822081A260/asset.xml';
+        if (Player) {
+          var navigationController = Player.getNavigationController();
+          navigationController.stop();
+          Player.sleep();
+          loadXml(assetxml);
+        } else {
+          loadXml(assetxml);
+        }
+      }
+
+      //================================================================================
+      function loadXml(path) {
+        console.log('load xml', assetxml);
+        $.ajax({
+          type: 'GET',
+          url: path,
+          dataType: 'text',
+          success: function(data) {
+            $('#xmlData').text(data);
+            configData = data;
+            var href_url = window.location.href.split('index.html');
+            if (window.location.href.toLowerCase().match('html')) {
+              callBackUrl =
+                href_url[0] +
+                '/' +
+                path.split('asset.xml')[0].replace(/\\/g, '/');
+              jsCallBackURL = href_url[0];
+            } else {
+              callBackUrl =
+                window.location.href +
+                '/' +
+                path.split('asset.xml')[0].replace(/\\/g, '/');
+              jsCallBackURL = window.location.href;
+              // === Window.location is to be added for standalone media.====== //
+            }
+            instantiatePlayer();
+          },
+          error: function(data) {
+            console.log('Error loading asset XML.');
+          }
+        });
+      }
+      //================================================================================
+      $(document).ready(bindSubmitEvent);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,148 @@
+#annotationCanvas {
+  position: absolute;
+  left: 993px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  display: none;
+}
+#annotation-panel {
+  position: fixed;
+  left: 928px;
+  top: 530px;
+}
+#annotation-panel #annotation-background {
+  width: 351px;
+  height: 37px;
+  border-radius: 3px;
+  border: 1px solid #8c8c85;
+  /*background: url("../../player/images/annotation_background.png") no-repeat;);*/
+  background: #e2e2e2; /* Old browsers */
+  background: -moz-linear-gradient(
+    top,
+    #e2e2e2 0%,
+    #acacac 100%
+  ); /* FF3.6-15 */
+  background: -webkit-linear-gradient(
+    top,
+    #e2e2e2 0%,
+    #acacac 100%
+  ); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(
+    to bottom,
+    #e2e2e2 0%,
+    #acacac 100%
+  ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e2e2e2', endColorstr='#acacac',GradientType=0 ); /* IE6-9 */
+}
+#annotation-panel #annotation-icon {
+  position: absolute;
+  left: 10px;
+  top: -5px;
+  width: 46px;
+  height: 46px;
+  background: url('../../player/images/annotation_icon.png') no-repeat;
+}
+#annotation-panel #annotation-color1 {
+  left: 66px;
+  background: #ffcc00;
+}
+#annotation-panel #annotation-color2 {
+  left: 100px;
+  background: #999900;
+}
+#annotation-panel #annotation-color3 {
+  left: 135px;
+  background: #ff6600;
+}
+#annotation-panel #annotation-color4 {
+  left: 170px;
+  background: #cc3300;
+}
+#annotation-panel .annotationColorSelectorClass {
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  top: 5px;
+  -moz-border-radius: 26px;
+  -webkit-border-radius: 26px;
+  border-radius: 28px;
+  border: 1px solid #3f3f3f;
+}
+#annotation-panel #annotation-tool {
+  position: absolute;
+  width: 28px;
+  height: 29px;
+  top: 7px;
+  left: 219px;
+}
+#annotation-panel .pencilClass {
+  background: url('../../player/images/annotation_pencil.png') no-repeat;
+}
+#annotation-panel .eraserClass {
+  background: url('../../player/images/annotation_eraser.png') no-repeat;
+}
+.annotationPencilCursor {
+  cursor: url('../../player/images/annotation_pencil.cur') 0 24, auto; /* standard: note the different path for the .cur file */
+}
+.annotationEraserCursor {
+  cursor: url('../../player/images/annotation_eraser.cur') 14 14, auto; /* standard: note the different path for the .cur file */
+}
+.annotationPencilCursorIE {
+  cursor: default; /*url("player/images/annotation_pencil.cur"), auto;  IE 8 and above */
+}
+.annotationEraserCursorIE {
+  cursor: default; /*url("player/images/annotation_eraser.cur"), auto;  IE 8 and above */
+}
+.annotationDefaultCursor {
+  cursor: default;
+}
+#annotation-panel #annotation-clearAll {
+  position: absolute;
+  width: 78px;
+  height: 27px;
+  top: 7px;
+  left: 266px;
+  font-family: TISClassEdgeBold;
+  font-size: 21px;
+  color: #3f3f3f;
+  cursor: default;
+}
+#annotation-panel .annotationSeperatorClass {
+  border-left: 2px solid #939393;
+  width: 1px;
+  height: 20px;
+  top: 10px;
+}
+#annotation-panel #annotation-seperator1 {
+  position: absolute;
+  left: 208px;
+}
+#annotation-panel #annotation-seperator2 {
+  position: absolute;
+  left: 255px;
+}
+#annotation-panel .borderOnColorSelector {
+  border: 2px solid black;
+}
+#annotation-toggle {
+  position: absolute;
+  top: 537px;
+  left: 600px;
+  width: 250px;
+}
+#annotation-toggle #annotation-toggleBtn {
+  width: 55px;
+  height: 33px;
+  background: #fffa00;
+  cursor: pointer;
+  float: left;
+  border: 2px solid red;
+  border-radius: 30px;
+}
+#annotation-toggle #annotation-message {
+  float: left;
+  padding-left: 10px;
+  line-height: 37px;
+}

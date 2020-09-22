@@ -1,0 +1,663 @@
+{
+  "navPanelTypes": [
+    {
+      "navPanelId": "navPanelAnimation",
+      "elements": [
+        "navPanelAnimation-background",
+        "navPanelAnimation-playPause",
+        "navPanelAnimation-slider",
+        "navPanelAnimation-totalTime",
+        "navPanelAnimation-playAgain"
+      ]
+    },
+    {
+      "navPanelId": "navPanelStepAnimation",
+      "elements": [
+        "navPanelStepAnimation-background",
+        "navPanelStepAnimation-playPause",
+        "navPanelStepAnimation-replay",
+        "navPanelStepAnimation-slider",
+        "navPanelStepAnimation-totalTime",
+        "navPanelStepAnimation-playAgain"
+      ]
+    },
+    {
+      "navPanelId": "navPanelInteractive",
+      "elements": [
+        "navPanelInteractive-background",
+        "navPanelInteractive-playPause",
+        "navPanelInteractive-next",
+        "navPanelInteractive-back",
+        "navPanelInteractive-slider",
+        "navPanelInteractive-replay",
+        "navPanelInteractive-playAgain",
+        "navBigPlayIcon"
+      ]
+    }
+  ],
+  "navPanelAnimation-background": {
+    "id": "nav-background",
+    "title": "",
+    "class": "navPanelAnimation-background-class",
+    "type": "div",
+    "data": "navBackground"
+  },
+  "navPanelStepAnimation-background": {
+    "id": "nav-background",
+    "title": "",
+    "class": "navPanelStepAnimation-background-class",
+    "type": "div",
+    "data": "navBackground"
+  },
+  "navPanelInteractive-background": {
+    "id": "nav-background",
+    "title": "",
+    "class": "navPanelInteractive-background-class",
+    "type": "div",
+    "data": "navBackground"
+  },
+  "navPanelAnimation-playPause": {
+    "id": "nav-playPauseHolder",
+    "class": "",
+    "type": "div",
+    "data": "navPlayPauseHolder",
+    "subelements": {
+      "playbtn": {
+        "id": "nav-playButton",
+        "title": "",
+        "class": "navPanelAnimation-playButton-class buttonBackground-class",
+        "hoverStyle": "play-button-over",
+        "clickEvent": "managePlayPause",
+        "type": "div",
+        "keyCode": "",
+        "tooltip": "Play",
+        "data": "navPlayButton",
+        "subelements": {
+          "playIcon": {
+            "id": "",
+            "class": "nav-playIcon",
+            "hoverStyle": "",
+            "type": "span"
+          }
+        }
+      },
+      "pausebtn": {
+        "id": "nav-pauseButton",
+        "title": "",
+        "class": "navPanelAnimation-pauseButton-class buttonBackground-class",
+        "hoverStyle": "pause-button-over",
+        "clickEvent": "managePlayPause",
+        "type": "div",
+        "keyCode": "",
+        "tooltip": "Pause",
+        "data": "navPauseButton",
+        "subelements": {
+          "pauseIcon": {
+            "id": "",
+            "class": "nav-pauseIcon",
+            "hoverStyle": "",
+            "type": "span"
+          }
+        }
+      },
+      "playdisablebtn": {
+        "id": "nav-playDisabledButton",
+        "title": "",
+        "class": "navPanelAnimation-playDisabledButton-class buttonBackground-class",
+        "hoverStyle": "",
+        "clickEvent": "",
+        "type": "div",
+        "keyCode": "",
+        "tooltip": "",
+        "data": "navPlayDisabledButton",
+        "subelements": {
+          "playDisabledIcon": {
+            "id": "",
+            "class": "nav-playIcon nav-playDisabledIcon",
+            "hoverStyle": "",
+            "type": "span"
+          }
+        }
+      },
+      "pausedisablebtn": {
+        "id": "nav-pauseDisabledButton",
+        "title": "",
+        "class": "navPanelAnimation-pauseDisabledButton-class buttonBackground-class",
+        "hoverStyle": "",
+        "clickEvent": "",
+        "type": "div",
+        "keyCode": "",
+        "tooltip": "",
+        "data": "navPauseDisabledButton",
+        "subelements": {
+          "pauseDisabledIcon": {
+            "id": "",
+            "class": "nav-pauseIcon nav-pauseDisabledIcon",
+            "hoverStyle": "",
+            "type": "span"
+          }
+        }
+      }
+    }
+  },
+  "navPanelStepAnimation-playPause": {
+    "id": "nav-playPauseHolder",
+    "class": "",
+    "type": "div",
+    "data": "navPlayPauseHolder",
+    "subelements": {
+      "playbtn": {
+        "id": "nav-playButton",
+        "title": "",
+        "class": "navPanelStepAnimation-playButton-class buttonBackground-class",
+        "hoverStyle": "play-button-over",
+        "clickEvent": "managePlayPause",
+        "type": "div",
+        "keyCode": "",
+        "tooltip": "Play",
+        "data": "navPlayButton",
+        "subelements": {
+          "playIcon": {
+            "id": "",
+            "class": "nav-playIcon",
+            "hoverStyle": "",
+            "type": "span"
+          }
+        }
+      },
+      "pausebtn": {
+        "id": "nav-pauseButton",
+        "title": "",
+        "class": "navPanelStepAnimation-pauseButton-class buttonBackground-class",
+        "hoverStyle": "pause-button-over",
+        "clickEvent": "managePlayPause",
+        "type": "div",
+        "keyCode": "",
+        "tooltip": "Pause",
+        "data": "navPauseButton",
+        "subelements": {
+          "pauseIcon": {
+            "id": "",
+            "class": "nav-pauseIcon",
+            "hoverStyle": "",
+            "type": "span"
+          }
+        }
+      },
+      "playdisablebtn": {
+        "id": "nav-playDisabledButton",
+        "title": "",
+        "class": "navPanelStepAnimation-playDisabledButton-class buttonBackground-class",
+        "hoverStyle": "",
+        "clickEvent": "",
+        "type": "div",
+        "keyCode": "",
+        "tooltip": "",
+        "data": "navPlayDisabledButton",
+        "subelements": {
+          "playDisabledIcon": {
+            "id": "",
+            "class": "nav-playIcon nav-playDisabledIcon",
+            "hoverStyle": "",
+            "type": "span"
+          }
+        }
+      },
+      "pausedisablebtn": {
+        "id": "nav-pauseDisabledButton",
+        "title": "",
+        "class": "navPanelStepAnimation-pauseDisabledButton-class buttonBackground-class",
+        "hoverStyle": "",
+        "clickEvent": "",
+        "type": "div",
+        "keyCode": "",
+        "tooltip": "",
+        "data": "navPauseDisabledButton",
+        "subelements": {
+          "pauseDisabledIcon": {
+            "id": "",
+            "class": "nav-pauseIcon nav-pauseDisabledIcon",
+            "hoverStyle": "",
+            "type": "span"
+          }
+        }
+      }
+    }
+  },
+  "navPanelInteractive-playPause": {
+    "id": "nav-playPauseHolder",
+    "class": "",
+    "type": "div",
+    "data": "navPlayPauseHolder",
+    "subelements": {
+      "playbtn": {
+        "id": "nav-playButton",
+        "title": "",
+        "class": "navPanelInteractive-playButton-class buttonBackground-class",
+        "hoverStyle": "play-button-over",
+        "clickEvent": "managePlayPause",
+        "type": "div",
+        "keyCode": "",
+        "tooltip": "Play",
+        "data": "navPlayButton",
+        "subelements": {
+          "playIcon": {
+            "id": "",
+            "class": "nav-playIcon",
+            "hoverStyle": "",
+            "type": "span"
+          }
+        }
+      },
+      "pausebtn": {
+        "id": "nav-pauseButton",
+        "title": "",
+        "class": "navPanelInteractive-pauseButton-class buttonBackground-class",
+        "hoverStyle": "pause-button-over",
+        "clickEvent": "managePlayPause",
+        "type": "div",
+        "keyCode": "",
+        "tooltip": "Pause",
+        "data": "navPauseButton",
+        "subelements": {
+          "pauseIcon": {
+            "id": "",
+            "class": "nav-pauseIcon",
+            "hoverStyle": "",
+            "type": "span"
+          }
+        }
+      },
+      "playdisablebtn": {
+        "id": "nav-playDisabledButton",
+        "title": "",
+        "class": "navPanelInteractive-playDisabledButton-class buttonBackground-class",
+        "hoverStyle": "",
+        "clickEvent": "",
+        "type": "div",
+        "keyCode": "",
+        "tooltip": "",
+        "data": "navPlayDisabledButton",
+        "subelements": {
+          "playDisabledIcon": {
+            "id": "",
+            "class": "nav-playIcon nav-playDisabledIcon",
+            "hoverStyle": "",
+            "type": "span"
+          }
+        }
+      },
+      "pausedisablebtn": {
+        "id": "nav-pauseDisabledButton",
+        "title": "",
+        "class": "navPanelInteractive-pauseDisabledButton-class buttonBackground-class",
+        "hoverStyle": "",
+        "clickEvent": "",
+        "type": "div",
+        "keyCode": "",
+        "tooltip": "",
+        "data": "navPauseDisabledButton",
+        "subelements": {
+          "pauseDisabledIcon": {
+            "id": "",
+            "class": "nav-pauseIcon nav-pauseDisabledIcon",
+            "hoverStyle": "",
+            "type": "span"
+          }
+        }
+      }
+    }
+  },
+  "navPanelAnimation-slider": {
+    "id": "nav-sliderHolder",
+    "class": "",
+    "type": "div",
+    "data": "navSliderHolder",
+    "subelements": {
+      "slider": {
+        "id": "nav-slider",
+        "title": "",
+        "class": "navPanelAnimation-slider-class",
+        "hoverStyle": "slider-over",
+        "type": "div",
+        "keyCode": "",
+        "data": "navSlider"
+      },
+      "sliderPointHolder": {
+        "id": "nav-sliderStepPointHolder",
+        "title": "",
+        "class": "navPanelAnimation-sliderStepPointHolder-class",
+        "hoverStyle": "slider-point-holder",
+        "type": "div",
+        "keyCode": "",
+        "data": "navSliderPointHolder"
+      }
+    }
+  },
+  "navPanelStepAnimation-slider": {
+    "id": "nav-sliderHolder",
+    "class": "",
+    "type": "div",
+    "data": "navSliderHolder",
+    "subelements": {
+      "slider": {
+        "id": "nav-slider",
+        "title": "",
+        "class": "navPanelStepAnimation-slider-class",
+        "hoverStyle": "slider-over",
+        "type": "div",
+        "keyCode": "",
+        "data": "navSlider"
+      },
+      "sliderPointHolder": {
+        "id": "nav-sliderStepPointHolder",
+        "title": "",
+        "class": "navPanelStepAnimation-sliderStepPointHolder-class",
+        "hoverStyle": "slider-point-holder",
+        "type": "div",
+        "keyCode": "",
+        "data": "navSliderStepPointHolder"
+      }
+    }
+  },
+  "navPanelInteractive-slider": {
+    "id": "nav-sliderHolder",
+    "class": "",
+    "type": "div",
+    "data": "navSliderHolder",
+    "subelements": {
+      "sliderBack": {
+        "id": "nav-sliderBack",
+        "title": "",
+        "class": "navPanelInteractive-sliderBackground-Class",
+        "type": "div",
+        "data": "navSliderBack"
+      },
+      "slider": {
+        "id": "nav-Interactiveslider",
+        "title": "",
+        "class": "navPanelInteractive-slider-class",
+        "hoverStyle": "slider-over",
+        "type": "div",
+        "keyCode": "",
+        "data": "navSlider"
+      },
+      "sliderPointHolder": {
+        "id": "nav-sliderStepPointHolder",
+        "title": "",
+        "class": "navPanelInteractive-sliderStepPointHolder-class",
+        "hoverStyle": "slider-point-holder",
+        "type": "div",
+        "keyCode": "",
+        "data": "navSliderStepPointHolder"
+      }
+    }
+  },
+  "navPanelAnimation-playAgain": {
+    "id": "nav-playAgainButton",
+    "title": "",
+    "class": "navPanelAnimation-playAgainButton-class",
+    "hoverStyle": "play-again-over",
+    "clickEvent": "playAgain",
+    "type": "div",
+    "keyCode": "",
+    "tooltip": "Play Again",
+    "text": "",
+    "data": "navPlayAgainButton",
+    "subelements": {
+      "playAgainIcon": {
+        "id": "",
+        "class": "",
+        "hoverStyle": "",
+        "type": "span",
+        "text": "Play Again"
+      }
+    }
+  },
+  "navPanelStepAnimation-playAgain": {
+    "id": "nav-playAgainButton",
+    "title": "",
+    "class": "navPanelStepAnimation-playAgainButton-class buttonBackground-class",
+    "hoverStyle": "play-again-over",
+    "clickEvent": "playAgain",
+    "type": "div",
+    "keyCode": "",
+    "tooltip": "Play Again",
+    "text": "",
+    "data": "navPlayAgainButton",
+    "subelements": {
+      "playAgainIcon": {
+        "id": "",
+        "class": "",
+        "hoverStyle": "",
+        "type": "span",
+        "text": "Play Again"
+      }
+    }
+  },
+  "navPanelInteractive-playAgain": {
+    "id": "nav-playAgainButton",
+    "title": "",
+    "class": "navPanelInteractive-playAgainButton-class buttonBackground-class",
+    "hoverStyle": "play-again-over",
+    "clickEvent": "playAgain",
+    "type": "div",
+    "keyCode": "",
+    "tooltip": "Play Again",
+    "text": "",
+    "data": "navPlayAgainButton",
+    "subelements": {
+      "playAgainIcon": {
+        "id": "",
+        "class": "",
+        "hoverStyle": "",
+        "type": "span",
+        "text": "Play Again"
+      }
+    }
+  },
+  "navPanelInteractive-next": {
+    "id": "nav-nextButtonHolder",
+    "class": "",
+    "type": "div",
+    "data": "navNextButtonHolder",
+    "subelements": {
+      "nextBtn": {
+        "id": "nav-nextButton",
+        "title": "",
+        "class": "navPanelInteractive-nextButton-class buttonBackground-class",
+        "hoverStyle": "next-over",
+        "clickEvent": "manageNext",
+        "type": "div",
+        "keyCode": "",
+        "tooltip": "Next",
+        "data": "navNextButton",
+        "subelements": {
+          "nextIcon": {
+            "id": "",
+            "class": "nav-nextIcon",
+            "hoverStyle": "",
+            "type": "span"
+          }
+        }
+      },
+      "nextBtnHighlight": {
+        "id": "nav-nextButtonHighlight",
+        "title": "",
+        "class": "navPanelInteractive-nextButtonHighlight-class buttonBackground-class",
+        "hoverStyle": "next-over",
+        "clickEvent": "manageNext",
+        "type": "div",
+        "keyCode": "",
+        "tooltip": "Next",
+        "data": "navNextButtonHighlight",
+        "subelements": {
+          "nextBtnHighlight": {
+            "id": "",
+            "class": "nav-nextIcon nav-nextBtnHighlightClass",
+            "hoverStyle": "",
+            "type": "span"
+          }
+        }
+      }
+    }
+  },
+  "navPanelInteractive-back": {
+    "id": "nav-backButton",
+    "title": "",
+    "class": "navPanelInteractive-backbutton-class buttonBackground-class",
+    "hoverStyle": "back-over",
+    "clickEvent": "manageBack",
+    "type": "div",
+    "keyCode": "",
+    "tooltip": "Back",
+    "data": "navBackButton",
+    "subelements": {
+      "backIcon": {
+        "id": "",
+        "class": "nav-backIcon",
+        "hoverStyle": "",
+        "type": "span"
+      }
+    }
+  },
+  "navPanelInteractive-replay": {
+    "id": "nav-replayButton",
+    "title": "",
+    "class": "navPanelInteractive-replayButton-class buttonBackground-class",
+    "hoverStyle": "replay-over",
+    "clickEvent": "manageReplay",
+    "type": "div",
+    "keyCode": "",
+    "tooltip": "Replay",
+    "data": "navReplayButton",
+    "subelements": {
+      "replayIcon": {
+        "id": "",
+        "class": "nav-replayIcon",
+        "hoverStyle": "",
+        "type": "span"
+      }
+    }
+  },
+  "navPanelStepAnimation-replay": {
+    "id": "nav-replayButton",
+    "title": "",
+    "class": "navPanelStepAnimation-replayButton-class buttonBackground-class",
+    "hoverStyle": "replay-over",
+    "clickEvent": "manageReplay",
+    "type": "div",
+    "keyCode": "",
+    "tooltip": "Replay",
+    "data": "navReplayButton",
+    "subelements": {
+      "replayIcon": {
+        "id": "",
+        "class": "nav-replayIcon",
+        "hoverStyle": "",
+        "type": "span"
+      }
+    }
+  },
+  "annotation": {
+    "id": "annotation-panel",
+    "class": "",
+    "type": "div",
+    "data": "annotationContainer",
+    "subelements": {
+      "annotationBackground": {
+        "id": "annotation-background",
+        "class": "",
+        "type": "div",
+        "data": "annotationBackground"
+      },
+      "annotation-icon": {
+        "id": "annotation-icon",
+        "clickEvent": "manageAnnotationPanel",
+        "class": "",
+        "type": "div",
+        "data": "annotationIcon"
+      },
+      "annotation-color1": {
+        "id": "annotation-color1",
+        "clickEvent": "manageColorYellow",
+        "class": "annotationColorSelectorClass",
+        "type": "div",
+        "data": "annotationColor1"
+      },
+      "annotation-color2": {
+        "id": "annotation-color2",
+        "clickEvent": "manageColorGreen",
+        "class": "annotationColorSelectorClass",
+        "type": "div",
+        "data": "annotationColor2"
+      },
+      "annotation-color3": {
+        "id": "annotation-color3",
+        "clickEvent": "manageColorOrange",
+        "class": "annotationColorSelectorClass",
+        "type": "div",
+        "data": "annotationColor3"
+      },
+      "annotation-color4": {
+        "id": "annotation-color4",
+        "clickEvent": "manageColorRed",
+        "class": "annotationColorSelectorClass",
+        "type": "div",
+        "data": "annotationColor4"
+      },
+      "annotation-seperator1": {
+        "id": "annotation-seperator1",
+        "class": "annotationSeperatorClass",
+        "type": "div",
+        "data": "annotationSeperator1"
+      },
+      "annotation-seperator2": {
+        "id": "annotation-seperator2",
+        "class": "annotationSeperatorClass",
+        "type": "div",
+        "data": "annotationSeperator2"
+      },
+      "annotation-tool": {
+        "id": "annotation-tool",
+        "clickEvent": "manageAnnotationTool",
+        "class": "pencilClass",
+        "type": "div",
+        "data": "annotationTool"
+      },
+      "annotation-clearAll": {
+        "id": "annotation-clearAll",
+        "clickEvent": "manageClearAll",
+        "class": "",
+        "text": "Clear All",
+        "type": "div",
+        "data": "annotationClearAll"
+      }
+    }
+  },
+  "navBigPlayIcon": {
+    "id": "bigPlayIcon",
+    "title": "",
+    "class": "bigPlayIcon",
+    "clickEvent": "managePlayPause",
+    "type": "div",
+    "tooltip": "Play",
+    "data": "bigPlayIcon"
+  },
+  "navPanelAnimation-totalTime": {
+    "id": "navPanelAnimation-totalTime",
+    "clickEvent": "",
+    "class": "navPanelAnimation-totalTimeClass navPanelAnimationTotalTimePositionClass",
+    "type": "div",
+    "text": "",
+    "data": "navPanelAnimationTotalTime"
+  },
+  "navPanelStepAnimation-totalTime": {
+    "id": "navPanelStepAnimation-totalTime",
+    "clickEvent": "",
+    "class": "navPanelAnimation-totalTimeClass navPanelStepAnimationTotalTimePositionClass",
+    "type": "div",
+    "text": "",
+    "data": "navPanelAnimationTotalTime"
+  }
+}

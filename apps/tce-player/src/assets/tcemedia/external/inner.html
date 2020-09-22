@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TCE Player</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="player/js/libs/jquery-ui-1.11.4/jquery-ui.css"
+      type="text/css"
+    />
+    <link rel="stylesheet" href="player/css/player.css" type="text/css" />
+    <script
+      type="text/javascript"
+      src="player/js/libs/jquery-1.11.3.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="player/js/shell/common/common.js"
+    ></script>
+    <script type="text/javascript" src="player/js/shell/service.js"></script>
+  </head>
+  <body>
+    <script>
+      //================================================================================
+      var Player;
+      var configPath = location.href.split('?')[1];
+      document.addEventListener('scriptLoaded', instactiatePlayer, false);
+
+      function instactiatePlayer() {
+        Player = new tcePlayer(configPath);
+        Player.init();
+      }
+
+      function loadScripts() {
+        var commonObj = new Common();
+        commonObj.includeJs();
+      }
+      //================================================================================
+      $(document).ready(loadScripts);
+      //================================================================================
+      // ================== Player API and its implementation ================== //
+
+      //Player.sleep();
+      // == To start, stop the animation below are the API implementation ==//
+      /* navigationController = Player.getNavigationController();
+	navigationController.start();
+	navigationController.stop(); */
+      /* 
+	function checkProgress() {
+		if(Player.getPlayerCreationStatus()) {
+			// ----- Player is ready to access ------ 
+			navigationController = Player.getNavigationController();
+			// calling start function to play the media, other API functions are pause(), stop() 
+			navigationController.start();
+			clearInterval(myListener);
+			
+			// to upload the Player call sleep method, setTimeOut is used to check the sleep method for 3 second. 
+			setTimeout(function(){ 
+				navigationController.stop();
+				Player.sleep();
+				Player = null;
+			// to reinstantiate the Player use awake method, setTimeOut is used to check the awake method called after 3 second. 		
+			setTimeout(function(){ 
+						awake();	
+				}, 3000)
+			}, 3000)
+		};
+	} */
+
+      // ====== Awake will reinstantiate the Player ===== //
+      /* function awake() {
+		instactiatePlayer();
+	}; */
+    </script>
+  </body>
+</html>
