@@ -26,21 +26,24 @@ function load_TCE_PLAYER_Angular(arg, path, resource) {
   resorceData = resource;
   targetContainer = arg;
   console.log("resource-->>. ",resource)
-  //console.log("arg-->>. ",arg)
-  //console.log("path-->>. ",path)
-  var mimeType = resource.Resource.metaData.mimeType;
+  console.log("arg-->>. ",arg)
+  console.log("path-->>. ",path)
+  var mimeType = resource.metaData.mimeType;
+  console.log("mimeType-->>. ",mimeType)
   
   if (Player) {
+    console.log("if player")
     var navigationController = Player.getNavigationController();
     navigationController.stop();
     Player.sleep();
     loadXml(path, mimeType);
   } else {
     if(mimeType === 'tool'){
+      console.log(resorceData)
       $('#xmlData').text(resorceData);
       configData = resorceData;
       callBackUrl = path;
-      jsCallBackURL = resorceData.Resource.fileName;
+      jsCallBackURL = resorceData.fileName;
       var loadIndicationSuccess = new CustomEvent("tcePlayerLoaded", { "detail": "success"  });
       document.dispatchEvent(loadIndicationSuccess);
       instantiatePlayer();
@@ -57,6 +60,7 @@ function load_TCE_PLAYER_Angular(arg, path, resource) {
 
 // satyajit june 2020
 function loadXml(path, mimeType) {
+  console.log("loadXml",mimeType)
   var loadIndicationFailure = new CustomEvent("tcePlayerLoaded", { "detail": "failed" });
   var ajaxObject = {
     type: 'GET',

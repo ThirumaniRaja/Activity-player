@@ -7,15 +7,14 @@ import {
   ViewChild,
   ViewContainerRef
 } from '@angular/core';
-import { Subscription } from 'rxjs';
+import { from, Subscription } from 'rxjs';
 import { ScriptLoaderService } from '../../services/script-loader.service';
-
 declare var tceVideoPlayerRef: any;
 declare var tcePlayerReplay: any;
 declare var load_TCE_PLAYER_Angular: any;
 
 @Component({
-  selector: 'tce-player-activity-player',
+  selector: 'activity-player',
   templateUrl: './activity-player.component.html',
   styleUrls: ['./activity-player.component.scss']
 })
@@ -64,11 +63,11 @@ export class ActivityPlayerComponent implements OnInit {
 
   getMediaSource() {
     this.resource = {
-      Resource : {
+    
         downloadFileExtension: undefined,
         encryptedFilePath:
           'd1846c27bdbaf3e6817b7190dbe02576bf4161d24133b5ee357f73861dd0c377ef99d5eeca8799110afd32f4c39414a4daa5ab698bff0cf42bd61063bacc04db791e',
-        fileName: 'energy-skate-park-basics_en.html',
+        fileName: 'index.html',
         filterStatus: true,
         metaData: {
           ansKeyId: null,
@@ -78,7 +77,7 @@ export class ActivityPlayerComponent implements OnInit {
           description: null,
           encryptedFilePath:
             'd1846c27bdbaf3e6817b7190dbe02576bf4161d24133b5ee357f73861dd0c377ef99d5eeca8799110afd32f4c39414a4daa5ab698bff0cf42bd61063bacc04db791e',
-          fileName: 'energy-skate-park-basics_en.html',
+          fileName: 'index.html',
           keywords: null,
           lcmsGradeId: 'Dynamics and Kinematics',
           lcmsSubjectId: 'sub-dcae372d-dc9e-490e-b14c-55f2f7bd2c3d',
@@ -99,10 +98,11 @@ export class ActivityPlayerComponent implements OnInit {
         title: 'Energy Skate Park: Basics',
         tpId: null,
         visibility: 1
-      }
+      
     };
 
-    let path ="/tce-repo-api/1/web/1/content/fileservice/d1846c27bdbaf3e6817b7190dbe02576bf4161d24133b5ee357f73861dd0c377ef99d5eeca8799110afd32f4c39414a4daa5ab698bff0cf42bd61063bacc04db791e/tool-02b3f6a9-5b83-4436-b280-0730d1255516/"
+    let path = "/assets/Dummy-Activity/"
+   // let path ="/tce-repo-api/1/web/1/content/fileservice/d1846c27bdbaf3e6817b7190dbe02576bf4161d24133b5ee357f73861dd0c377ef99d5eeca8799110afd32f4c39414a4daa5ab698bff0cf42bd61063bacc04db791e/tool-02b3f6a9-5b83-4436-b280-0730d1255516/"
     const playerOutletElement: HTMLElement = this.tcePlayerOutlet.nativeElement;
     setTimeout(() => {
       this.containerWidth = playerOutletElement.clientWidth;
@@ -110,7 +110,7 @@ export class ActivityPlayerComponent implements OnInit {
     }, 1000);
 
     console.log("path",path)
-    console.log("----------resource",this.resource.Resource.metaData.mimeType)
+    console.log("----------resource",this.resource.metaData.mimeType)
     load_TCE_PLAYER_Angular(playerOutletElement, path, this.resource);
 
   }

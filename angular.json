@@ -8,9 +8,9 @@
           "style": "scss"
         }
       },
-      "root": "apps/tce-player",
+      "root": "apps",
       "sourceRoot": "apps/tce-player/src",
-      "prefix": "tce-player",
+      "prefix": "",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",

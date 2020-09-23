@@ -4,7 +4,7 @@ import { ActivityPlayerComponent } from 'libs/activity-player/src/lib/components
 import { LibConfigService } from 'libs/lib-config/src/lib/services/lib-config.service';
 
 @Component({
-  selector: 'tce-player-root',
+  selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })

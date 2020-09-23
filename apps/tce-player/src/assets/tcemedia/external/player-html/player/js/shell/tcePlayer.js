@@ -107,8 +107,8 @@ var tcePlayer = function(
   function parseConfigXml() {
     /* Read config.xml and store filesNames of the assets */
     var data = $.parseXML(configData);
-    //console.log("parse config data--1 >> ", configData.tcetype)
-    //console.log("parse config data--2 >> ", data)
+    console.log("parse config data--1 >> ", configData.tcetype)
+    console.log("parse config data--2 >> ", data)
     
 
     if(data !== null){
